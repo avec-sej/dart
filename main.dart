@@ -7,4 +7,17 @@ void main() {
   var name = 'Seo';
   name = 'Eunji';
   String name2 = "Seo";
+
+  //dynamic : ideally, you would like to avoid it. Use Dynamic when you really really need it.
+  //var test;
+  dynamic test;
+  // test = 'strTest';
+  // test = 'intTest';
+  // test = true;
+  if(test is String){
+    //check Type of the data
+  }
+  if(test is int){
+    
+  }
 }
