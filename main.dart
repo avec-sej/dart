@@ -20,4 +20,13 @@ void main() {
   if(test is int){
     
   }
+
+
+  //null safety(?) = nullable 
+  String? nullTest = "hello";
+  nullTest = null;
+  // if(nullTest != null){
+  //   nullTest.isNotEmpty ;
+  // }
+  nullTest?.isNotEmpty; 
 }
