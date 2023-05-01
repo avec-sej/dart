@@ -30,24 +30,38 @@ void main() {
   nullTest?.isNotEmpty; 
 
   /* final */
-  final testFinal = "final test";
+  final finalTest = "final test";
   //testFinal = "error";
-  final String testFinal2 = "final test 2"; // String 생략가능
+  final String finalTest2 = "final test 2"; // String 생략가능
 
   /* late : final | var 앞에 붙일 수 있는 수식어로, 초기데이터 없이 변수를 선언할 수 있음 */
-  late final testLate;
-  late var testLate2;
+  late final lateTest;
+  late var lateTest2;
   //do something, like go to API
-  testLate = "late test";
+  lateTest = "late test";
 
   /* Constant (const) */
-  const testConst = "const Test";
-  //testConst = "error";
+  const constTest = "const Test";
+  //constTest = "error";
 
   /* List */
-  var testList = [1,2,3,4,5];
-  List<int> testList2 = [1,2,3,4,5]; // 2가지 방법있다. 같은 결과값 나옴.
-  testList.add(6); 
-  print(testList.first);
+  var listTest = [1,2,3,4,5];
+  List<int> listTest2 = [1,2,3,4,5]; // 2가지 방법있다. 같은 결과값 나옴.
+  listTest.add(6); 
+  print(listTest.first); // 1
+  listTest.last; //5
+
+  /* Collection If */
+  var giveMeFive = true;
+  var listTest3 = [
+    1,
+    2,
+    3,
+    4,
+    if(giveMeFive) 5,
+    //if(giveMeFive){listTest3.add(5)} 의 shortcut 
+    ];
+    print(listTest3);
+
 
 }
