@@ -63,5 +63,10 @@ void main() {
     ];
     print(listTest3);
 
+  /* String Interpolation ($) "" '' Both can be used. */
+  var strName = "Eunji";
+  var age = 20;
+  var greeting = 'Hello, my name is ${strName}. Nice to meet you. I\'m ${age+5}.';
+  print(greeting);
 
 }
