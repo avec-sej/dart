@@ -69,4 +69,17 @@ void main() {
   var greeting = 'Hello, my name is ${strName}. Nice to meet you. I\'m ${age+5}.';
   print(greeting);
 
+  /* Collection For */
+  var oldFriends = ['Lynn', 'Colin'];
+  var newFriends = [
+    'Lewis',
+    'Cat',
+    'Lee',
+    for(var friend in oldFriends) "<3 ${friend}",
+  ];
+  // for(var friend in oldFriends){
+  //   newFriends.add(friend);
+  // }
+  print(newFriends);
+
 }
