@@ -82,4 +82,17 @@ void main() {
   // }
   print(newFriends);
 
+ /* Maps */
+  var mapTest = {
+    'mapName': 'Lee',
+    'mapAge': 25,
+    'superPower': false,
+  };
+  Map<List<int>, bool> mapTest2 = {
+    [1,2,3,4]: true,
+    [5,6,7,8]: false,
+  };
+
+
+
 }
