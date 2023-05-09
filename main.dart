@@ -92,7 +92,18 @@ void main() {
     [1,2,3,4]: true,
     [5,6,7,8]: false,
   };
+  /* Sets */
+    var setTest = {1,2,3,4};
+    Set<int> setTest2 = {1,2,3,4}; // all items are unique.
+    setTest.add(1);
+    setTest.add(1);
+    print('setTest: ${setTest}'); //{1, 2, 3, 4}
+    List<int> listTest4 = [1,2,3,4];
+    listTest4.add(4);
+    listTest4.add(4);
+    print('listTest: ${listTest4}'); //[1, 2, 3, 4, 4, 4]
 
 
+ 
 
 }
