@@ -103,7 +103,21 @@ void main() {
     listTest4.add(4);
     print('listTest: ${listTest4}'); //[1, 2, 3, 4, 4, 4]
 
-
+  /* Define a Function */
+  print(sayHello('Lee'));
+  print(sayHello3('Joe'));
  
 
+}
+
+/* Define a Function */
+String sayHello (String name){
+  return "Hello ${name}, nice to meet u";
+}
+
+//sayHello = sayHello3
+String sayHello3(String name) => "Hello ${name}, nice to meet u";
+
+void sayHello2 (String name){
+  print("Hello ${name}, nice to meet u");
 }
