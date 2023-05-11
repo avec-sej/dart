@@ -106,7 +106,24 @@ void main() {
   /* Define a Function */
   print(sayHello('Lee'));
   print(sayHello3('Joe'));
- 
+
+  /* Named parameters */
+  //print(yourInfo("Seo", 30, "France"));
+  print(yourInfo(
+    age: 25, 
+    country: "England", 
+    name: "Jane",
+  ));
+  print(yourInfo( 
+    country: "Germany", 
+  ));
+  print(yourInfo2( 
+    country: "France",
+    age: 23,
+    name: "Zoe", 
+  ));
+
+
 
 }
 
@@ -121,3 +138,17 @@ String sayHello3(String name) => "Hello ${name}, nice to meet u";
 void sayHello2 (String name){
   print("Hello ${name}, nice to meet u");
 }
+
+ /* Named parameters */
+//  String yourInfo (String name, int age, String country){
+//   return "Hello $name, I'm $age, I'm from $country";
+//  }
+//  String yourInfo ({String name, int age, String country}){  //null값이 생길 수 있기 때문에 에러남 
+//   return "Hello $name, I'm $age, I'm from $country";
+//  }
+ String yourInfo ({String name="anonymous", int age=10, String country="Korea",}){  //default값 지정해줌 
+  return "Hello $name, I'm $age, I'm from $country";
+ }
+ String yourInfo2  ({required String name, required int age, required String country,}){  //required 지정해줌 
+  return "Hello $name, I'm $age, I'm from $country";
+ }
