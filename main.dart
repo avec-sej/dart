@@ -117,7 +117,7 @@ void main() {
   print(yourInfo( 
     country: "Germany", 
   ));
-  print(yourInfo2( 
+  print(yourInfo2(  // 전부 안적으면 에러남 
     country: "France",
     age: 23,
     name: "Zoe", 
