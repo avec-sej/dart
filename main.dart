@@ -101,7 +101,7 @@ void main() {
     List<int> listTest4 = [1,2,3,4];
     listTest4.add(4);
     listTest4.add(4);
-    print('listTest: ${listTest4}'); //[1, 2, 3, 4, 4, 4]
+    print('listTest4: ${listTest4}'); //[1, 2, 3, 4, 4, 4]
 
   /* Define a Function */
   print(sayHello('Lee'));
@@ -123,10 +123,23 @@ void main() {
     name: "Zoe", 
   ));
 
+  print(sayHello4("Mimi", 23));
+  print(capitalizedName("eunji"));
+  print(capitalizedName2(null));
+  /* QQ equals */
+  String? qqName;
+  //'??='은 null인 경우에 대입해라는 뜻 
+  qqName ??= "qqName";
+  //아래는 실행되지 않는다, 왜냐하면 변수가 null이 아니게 되었기때문에
+  qqName ??= "None";
+  print("QQ Equals : "+qqName); //expected output : QQ Equals : qqName
 
+  print(reverseListofNum(listTest4));
 
 }
 
+
+/*===========================out of main()============================== */
 /* Define a Function */
 String sayHello (String name){
   return "Hello ${name}, nice to meet u";
@@ -152,3 +165,33 @@ void sayHello2 (String name){
  String yourInfo2  ({required String name, required int age, required String country,}){  //required 지정해줌 
   return "Hello $name, I'm $age, I'm from $country";
  }
+
+ /* Optional positional parameters */
+  String sayHello4(
+    String name,
+    int age,
+    [String? country="cuba"]
+  ) => "Hello $name, I'm $age, I'm from $country";
+
+  /* QQ operator */
+  String capitalizedName(String name)=>name.toUpperCase();
+  //capitalizedName2 = '?'를 붙이면 null이 될 수도 있음을 나타냄 
+  //long ver.
+  String capitalizedName2(String? name){
+    if(name != null){
+      return name.toUpperCase();
+    }else{
+      return "ANONYMOUS";
+    }
+  }
+  //short ver.
+  String capitalizedName3(String? name)=> name != null ? name.toUpperCase() : "ANONYMOUS";
+  //shorter ver.
+  String capitalizedName4(String? name)=> name?.toUpperCase() ?? "ANONYMOUS";
+
+  /* Typedof */
+  typedef TypeofListInt = List<int>;
+  TypeofListInt reverseListofNum(List<int> list){
+    var reversed = list.reversed;
+    return reversed.toList();
+  }
